@@ -18,7 +18,7 @@ for i, files in enumerate(onlyfiles):
 
 Labels = np.asarray(Labels, dtype=np.int32)
 
-model = cv2.face.() # Linear Binary Phase face recognizer
+model = cv2.face.LBPHFaceRecognizer_create() # Linear Binary Phase face recognizer
 model.train(np.asarray(Training_Data), np.asarray(Labels))
 
 print("Model Training Completed..")
